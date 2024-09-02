@@ -14,6 +14,6 @@ if [[ $- != *i* ]] ; then
 fi
 
 # Put your fun stuff here:
-eval "$(zoxide init --cmd cd bash)"
-eval "$(starship init bash)"
+# eval "$(zoxide init --cmd cd bash)"
+# eval "$(starship init bash)"
 # neofetch
