@@ -16,7 +16,7 @@ dev-lang/python ssl
 dev-libs/nettle gmp
 
 # Rust lang
-dev-lang/rust nightly rust-analyzer rust-src rustfmt
+dev-lang/rust nightly rust-analyzer rust-src rustfmt #system-bootstrap #after compiling dev-lang/rust #
 net-misc/curl http2 ssl
 
 # Core packages
