@@ -3,6 +3,7 @@ sys-kernel/installkernel grub
 sys-kernel/genkernel firmware
 
 # System pkg
+media-video/pipewire pipewire-alsa sound-server
 app-shells/bash-completion eselect
 sys-apps/systemd-utils tmpfiles
 sys-auth/seatd builtin server
@@ -19,10 +20,9 @@ dev-lang/rust nightly rust-analyzer rust-src rustfmt
 net-misc/curl http2 ssl
 
 # Core packages
-app-crypt/gnupg smartcard ssl tools
+app-crypt/gnupg smartcard tools
 sys-block/parted device-mapper
 dev-vcs/git gpg highlight curl
-media-video/pipewire pipewire-alsa sound-server
 
 # Networking packages
 net-misc/networkmanager nss iptables tools connection-sharing dhcpcd
@@ -39,16 +39,3 @@ app-alternatives/awk gawk
 app-alternatives/tar gnu
 app-alternatives/sh bash
 app-alternatives/bc gnu
-
-# CLANG enviroment (needed for compiling PGO programs) #
-sys-devel/clang-runtime compiler-rt sanitize
-sys-devel/clang-common default-compiler-rt default-lld
-sys-libs/compiler-rt-sanitizers profile orc
-sys-libs/libunwind static-libs
-
-# neovim uses luajit by default so we select it#
-app-editors/neovim lua_single_target_luajit
-dev-lua/luv lua_single_target_luajit -lua_single_target_lua5-4
-dev-lua/mpack lua_targets_luajit lua_single_target_luajit
-dev-lua/lpeg lua_targets_luajit lua_single_target_luajit
-dev-lua/lua-cjson internal-fpconv
