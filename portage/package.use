@@ -20,7 +20,7 @@ dev-lang/rust nightly rust-analyzer rust-src rustfmt #system-bootstrap #after co
 net-misc/curl http2 ssl
 
 # Core packages
-app-crypt/gnupg smartcard tools
+app-crypt/gnupg smartcard tools ssl
 sys-block/parted device-mapper
 dev-vcs/git gpg highlight curl
 
@@ -30,12 +30,19 @@ net-dns/dnsmasq dhcp
 
 # App alternatives
 app-alternatives/ninja reference
-app-alternatives/yacc reference
 app-alternatives/bzip2 lbzip2
 app-alternatives/lex reflex
+app-alternatives/yacc bison
 app-alternatives/gzip pigz
 app-alternatives/cpio gnu
 app-alternatives/awk gawk
 app-alternatives/tar gnu
 app-alternatives/sh bash
 app-alternatives/bc gnu
+
+# neovim uses luajit by default so we select it#
+app-editors/neovim lua_single_target_luajit
+dev-lua/luv lua_single_target_luajit -lua_single_target_lua5-4
+dev-lua/mpack lua_targets_luajit lua_single_target_luajit
+dev-lua/lpeg lua_targets_luajit lua_single_target_luajit
+dev-lua/lua-cjson internal-fpconv
