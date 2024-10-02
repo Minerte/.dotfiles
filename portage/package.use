@@ -21,8 +21,8 @@ net-misc/curl http2 ssl
 
 # Core packages
 app-crypt/gnupg smartcard tools ssl
-sys-block/parted device-mapper
 dev-vcs/git gpg highlight curl
+sys-block/parted device-mapper
 
 # Networking packages
 net-misc/networkmanager nss iptables tools connection-sharing dhcpcd
